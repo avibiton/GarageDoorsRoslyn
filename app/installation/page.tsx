@@ -73,9 +73,11 @@ export default function InstallationPage() {
           src="/images/garage-installation.jpg"
           alt="New garage door installation in Roslyn NY"
           fill
-          className="object-cover opacity-20"
+          className="object-cover object-center opacity-50"
           priority
+          sizes="100vw"
         />
+        <div className="absolute inset-0 bg-gradient-to-b from-slate-900/70 via-slate-900/60 to-slate-900/80" aria-hidden="true" />
         <div className="relative max-w-4xl mx-auto">
           <p className="text-yellow-400 text-sm font-semibold uppercase tracking-widest mb-3">
             Free In-Home Estimate · Roslyn NY
