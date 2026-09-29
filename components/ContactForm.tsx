@@ -15,15 +15,33 @@ const services = [
 export default function ContactForm() {
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(false);
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
+    const form = e.currentTarget;
+    if (!form.checkValidity()) {
+      form.reportValidity();
+      return;
+    }
     setLoading(true);
-    // TODO: Connect to email service (e.g. Resend, SendGrid, Formspree) or CRM here.
-    // Example with Formspree: POST to https://formspree.io/f/YOUR_FORM_ID
-    await new Promise((r) => setTimeout(r, 800));
-    setLoading(false);
-    setSubmitted(true);
+    setError(false);
+    try {
+      const data = new FormData(form);
+      const body = new URLSearchParams();
+      data.forEach((value, key) => body.append(key, String(value)));
+      const res = await fetch("/__forms.html", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: body.toString(),
+      });
+      if (!res.ok) throw new Error(`Form submission failed: ${res.status}`);
+      setSubmitted(true);
+    } catch {
+      setError(true);
+    } finally {
+      setLoading(false);
+    }
   }
 
   if (submitted) {
@@ -40,7 +58,18 @@ export default function ContactForm() {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-4" noValidate>
+    <form
+      name="service-request"
+      onSubmit={handleSubmit}
+      className="space-y-4"
+      noValidate
+    >
+      <input type="hidden" name="form-name" value="service-request" />
+      <p className="hidden" aria-hidden="true">
+        <label>
+          Don&apos;t fill this out: <input name="bot-field" tabIndex={-1} autoComplete="off" />
+        </label>
+      </p>
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         <div>
           <label htmlFor="name" className="block text-sm font-semibold text-gray-700 mb-1">
@@ -161,6 +190,14 @@ export default function ContactForm() {
           placeholder="e.g. SPRING10"
         />
       </div>
+
+      {error && (
+        <div role="alert" className="bg-red-50 border border-red-200 rounded-lg p-4 text-red-800 text-sm">
+          Sorry, your request could not be sent. Please call{" "}
+          <a href="tel:+15166297163" className="font-bold underline">(516) 629-7163</a>{" "}
+          for immediate service.
+        </div>
+      )}
 
       <button
         type="submit"
