@@ -3,8 +3,7 @@ export const business = {
   phone: "(516) 629-7163",
   phoneTel: "tel:+15166297163",
   website: "garagedoorsroslyn.com",
-  rating: "5.0",
-  ratingCopy: "Rated 5.0 · Roslyn NY · Nassau County North Shore",
+  tagline: "Roslyn NY · Nassau County North Shore",
   serviceAreas: [
     "Roslyn NY 11576",
     "Roslyn Heights NY 11577",

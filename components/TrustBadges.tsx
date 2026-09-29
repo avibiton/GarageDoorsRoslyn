@@ -1,10 +1,10 @@
 const badges = [
-  { icon: "⭐", label: "Rated 5.0" },
   { icon: "⚡", label: "Same-Day Service" },
   { icon: "📋", label: "Free Written Estimate" },
   { icon: "🛡️", label: "Written Warranty" },
   { icon: "✅", label: "Licensed & Insured" },
   { icon: "🕐", label: "24/7 Emergency Service" },
+  { icon: "🏠", label: "Locally Owned & Operated" },
 ];
 
 export default function TrustBadges() {

@@ -115,8 +115,6 @@ export default function HomePage() {
             </Link>
           </div>
           <div className="mt-6 flex flex-wrap justify-center gap-3 text-sm text-gray-400">
-            <span>⭐ Rated 5.0</span>
-            <span className="text-slate-600">·</span>
             <span>Licensed &amp; Insured</span>
             <span className="text-slate-600">·</span>
             <span>Free Written Estimate</span>
@@ -278,6 +276,54 @@ export default function HomePage() {
             Frequently Asked Questions — Roslyn NY Garage Doors
           </h2>
           <FAQAccordion faqs={faqs} />
+        </div>
+      </section>
+
+      {/* Our Promise */}
+      <section className="py-16 px-4 bg-gray-50">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-3xl font-bold text-center text-slate-900 mb-2">
+            Our Promise
+          </h2>
+          <p className="text-center text-gray-500 mb-10">
+            What you can count on every time you call {business.name}.
+          </p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="bg-white rounded-2xl p-6 border border-gray-100">
+              <div className="text-3xl mb-3" aria-hidden="true">📋</div>
+              <h3 className="font-bold text-slate-900 text-lg mb-2">Written Estimate First</h3>
+              <p className="text-gray-600 text-sm leading-relaxed">
+                Free written estimate before any work begins. Full inspection, written price, and
+                your approval first — the price we quote is the final price.
+              </p>
+            </div>
+            <div className="bg-white rounded-2xl p-6 border border-gray-100">
+              <div className="text-3xl mb-3" aria-hidden="true">🛡️</div>
+              <h3 className="font-bold text-slate-900 text-lg mb-2">Written Warranty</h3>
+              <p className="text-gray-600 text-sm leading-relaxed">
+                Every repair backed in writing. Not right after we leave? We return at no charge.
+              </p>
+            </div>
+            <div className="bg-white rounded-2xl p-6 border border-gray-100">
+              <div className="text-3xl mb-3" aria-hidden="true">💲</div>
+              <h3 className="font-bold text-slate-900 text-lg mb-2">Starting-From Prices</h3>
+              <p className="text-gray-600 text-sm leading-relaxed">
+                Starting-from prices are posted on our{" "}
+                <Link href="/repair" className="text-slate-800 font-semibold underline">repair</Link>{" "}
+                and{" "}
+                <Link href="/springs" className="text-slate-800 font-semibold underline">spring replacement</Link>{" "}
+                pages.
+              </p>
+            </div>
+            <div className="bg-white rounded-2xl p-6 border border-gray-100">
+              <div className="text-3xl mb-3" aria-hidden="true">✅</div>
+              <h3 className="font-bold text-slate-900 text-lg mb-2">Licensed &amp; Insured</h3>
+              <p className="text-gray-600 text-sm leading-relaxed">
+                Licensed and insured. Auto-reverse test, sensor check, and spring balance verified
+                before we leave every job.
+              </p>
+            </div>
+          </div>
         </div>
       </section>
 

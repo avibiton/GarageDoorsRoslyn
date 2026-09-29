@@ -35,12 +35,6 @@ export default function SchemaMarkup({ pageType = "home", faqs }: Props) {
       "@type": "City",
       name: area,
     })),
-    aggregateRating: {
-      "@type": "AggregateRating",
-      ratingValue: "5.0",
-      bestRating: "5",
-      reviewCount: "47",
-    },
     priceRange: "$$",
   };
 
