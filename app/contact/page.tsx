@@ -9,6 +9,7 @@ export const metadata: Metadata = {
   title: "Contact Garage Doors Roslyn | 24/7 Same-Day Garage Door Service",
   description:
     "Contact Garage Doors Roslyn for same-day service in Roslyn NY 11576 and Nassau County. A real technician answers 24/7. Call (516) 629-7163.",
+  alternates: { canonical: "/contact" },
 };
 
 const contactCards = [

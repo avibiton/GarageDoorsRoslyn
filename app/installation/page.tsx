@@ -10,6 +10,7 @@ export const metadata: Metadata = {
   title: "Garage Door Installation Roslyn NY | New Doors, Carriage House & Insulated",
   description:
     "New garage door installation in Roslyn NY. Carriage house, insulated steel, full-view glass, custom estate doors. Free in-home estimate. Call (516) 629-7163.",
+  alternates: { canonical: "/installation" },
 };
 
 const doorStyles = [

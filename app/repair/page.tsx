@@ -10,6 +10,7 @@ export const metadata: Metadata = {
   title: "Garage Door Repair Roslyn NY | Same-Day Service | Garage Doors Roslyn",
   description:
     "Same-day garage door repair in Roslyn NY 11576. Broken springs, off-track doors, cable failure, worn rollers & more. Licensed & insured. Call (516) 629-7163.",
+  alternates: { canonical: "/repair" },
 };
 
 const repairServices = [

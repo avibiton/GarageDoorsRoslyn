@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { business, coupons } from "@/lib/config";
@@ -5,6 +6,10 @@ import TrustBadges from "@/components/TrustBadges";
 import CouponCard from "@/components/CouponCard";
 import FAQAccordion from "@/components/FAQAccordion";
 import SchemaMarkup from "@/components/SchemaMarkup";
+
+export const metadata: Metadata = {
+  alternates: { canonical: "/" },
+};
 
 const whyUs = [
   {

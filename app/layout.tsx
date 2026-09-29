@@ -8,6 +8,7 @@ import MobileStickyCallButton from "@/components/MobileStickyCallButton";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://garagedoorsroslyn.com"),
   title: "Garage Doors Roslyn NY | Same-Day Repair & Installation | (516) 629-7163",
   description:
     "Same-day garage door repair, spring replacement, opener installation & new door service in Roslyn NY 11576. Licensed & insured. Free estimate. Call (516) 629-7163.",

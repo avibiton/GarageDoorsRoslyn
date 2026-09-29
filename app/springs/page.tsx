@@ -10,6 +10,7 @@ export const metadata: Metadata = {
   title: "Broken Garage Door Spring Replacement Roslyn NY | Torsion & Extension Springs",
   description:
     "Broken garage door spring replacement in Roslyn NY. Torsion and extension springs, high-cycle upgrades. Same-day service. Free estimate. Call (516) 629-7163.",
+  alternates: { canonical: "/springs" },
 };
 
 const springPricing = [

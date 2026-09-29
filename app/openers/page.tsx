@@ -10,6 +10,7 @@ export const metadata: Metadata = {
   title: "Garage Door Opener Repair Roslyn NY | LiftMaster & Genie Installation",
   description:
     "Garage door opener repair and installation in Roslyn NY. LiftMaster, Genie, Chamberlain. Belt drive, wall-mount, battery backup, MyQ. Call (516) 629-7163.",
+  alternates: { canonical: "/openers" },
 };
 
 const openerPricing = [
