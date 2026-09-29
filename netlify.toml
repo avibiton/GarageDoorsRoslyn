@@ -1,0 +1,11 @@
+[build]
+  command = "npm run build"
+  publish = ".next"
+
+# Old-URL redirects (Task 7). See docs/old-url-redirects.md for the full mapping.
+# The Wayback Machine lists only two old page URLs for this domain:
+#   /            -> exists on the new site (200)
+#   /index.html  -> already redirected to / in next.config.ts (301); not duplicated here
+# All other archived URLs are old image/CSS assets, which are intentionally not redirected.
+# Add [[redirects]] entries below (status = 301, force = true, single hop,
+# target must be an existing page) if Search Console reports further old 404 URLs.
